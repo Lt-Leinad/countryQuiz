@@ -5,12 +5,47 @@
 }
 
 :root {
+    --fs-XL: 42px;
     --fs-L: 26px;
     --fs-M: 21px;
     --fs-S: 16px;
     --darkColor: black;
     --lightColor: white;
+    --correct: green;
+    --wrong: red;
     --accentColor: orange;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 250ms;
+    animation-timing-function: ease-in-out;
+}
+
+.fade-out {
+    animation-name: fade-in;
+    animation-duration: 250ms;
+    animation-timing-function: ease-in-out;
 }
 
 .question-container {
@@ -18,13 +53,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(375px - (375px * 0.1));
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     align-items: center;
     justify-content: center;
-    padding: 5vw;
+    width: 375px;
+    padding: 20px;
+    transition: 250ms;
+    background-color: var(--lightColor);
+    border: 1px solid var(--darkColor);
 }
 
 .question-container > * {
@@ -41,14 +79,57 @@
 }
 
 .answer-container {
-    height: 100px;
-    padding: 5vw;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 5vw;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 60px;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
+.country {
+    font-size: var(--fs-L);
+    object-fit: contain;
 }
 
-.flag {
-    font-size: 67px;
+.answer {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--darkColor);
+    width: 100%;
+    font-size: var(--fs-S);
+    transition: 250ms;
+    background-color: var(--lightColor);
+    color: var(--darkColor);
+}
+
+.answer:active {
+    cursor: pointer;
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+}
+
+.correct, .wrong {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    display: grid;
+    place-content: center;
+    font-size: var(--fs-XL);
+    color: var(--lightColor);
+}
+
+.correct {
+    background-color: var(--correct);
+}
+
+.wrong {
+    background-color: var(--wrong);
+}
+
+.display-none {
+    display: none;
 }
