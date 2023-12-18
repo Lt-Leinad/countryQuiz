@@ -63,6 +63,7 @@
     transition: 250ms;
     background-color: var(--lightColor);
     border: 1px solid var(--darkColor);
+    background-color: var(--accentColor);
 }
 
 .question-container > * {
@@ -84,13 +85,14 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 60px;
     grid-gap: 20px;
-    padding: 20px;
   }
 
 .flag {
     width: 100%;
     aspect-ratio: 2/1;
     font-size: var(--fs-L);
+    display: grid;
+    place-content: center;
     object-fit: contain;
 }
 
