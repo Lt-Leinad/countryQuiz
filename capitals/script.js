@@ -45,6 +45,9 @@ const questionReset = () => {
         );
 
         document.querySelector(".country").textContent = answer.name.common;
+        if (randomIndex(25) == 7) {
+          answers[randomIndex(3)] = `${answer.name.common} City`;
+        }
         [...document.querySelectorAll(".answer")].forEach(
           (x, i) => (x.textContent = answers[i])
         );
