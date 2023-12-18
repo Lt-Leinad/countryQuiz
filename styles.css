@@ -38,13 +38,13 @@
 
 .fade-in {
     animation-name: fade-in;
-    animation-duration: 250ms;
+    animation-duration: 750ms;
     animation-timing-function: ease-in-out;
 }
 
 .fade-out {
-    animation-name: fade-in;
-    animation-duration: 250ms;
+    animation-name: fade-out;
+    animation-duration: 775ms;
     animation-timing-function: ease-in-out;
 }
 
@@ -103,6 +103,7 @@
     transition: 250ms;
     background-color: var(--lightColor);
     color: var(--darkColor);
+    padding: 5px;
 }
 
 .answer:active {
