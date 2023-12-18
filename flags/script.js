@@ -63,16 +63,15 @@ const gameInit = () => {
 };
 
 const correct = function () {
+  document.querySelector(".ding").play();
   document.querySelector(".correct").classList.remove("display-none");
   document.querySelector(".correct").classList.add("fade-in");
-  document.querySelector(".ding").play();
 };
 
 const wrong = function () {
   document.querySelector(".wrong").classList.remove("display-none");
   document.querySelector(".wrong").classList.add("fade-in");
   document.querySelector(".wrong").textContent = answer.name.common;
-  document.querySelector(".buzzer").play();
 };
 
 const pointsFunc = function (e) {

@@ -69,7 +69,6 @@ const correct = function () {
 };
 
 const wrong = function () {
-  document.querySelector(".buzzer").play();
   document.querySelector(".wrong").classList.remove("display-none");
   document.querySelector(".wrong").classList.add("fade-in");
   document.querySelector(".wrong").textContent = answer.capital[0];
