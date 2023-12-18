@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -9,11 +10,11 @@
     --fs-L: 26px;
     --fs-M: 21px;
     --fs-S: 16px;
-    --darkColor: black;
-    --lightColor: white;
-    --correct: green;
-    --wrong: red;
-    --accentColor: orange;
+    --darkColor: #070707;
+    --lightColor: #E3EBFF;
+    --correct: #109b5f;
+    --wrong: #d81546;
+    --accentColor: #4392F1;
 }
 
 @keyframes fade-in {
@@ -38,13 +39,13 @@
 
 .fade-in {
     animation-name: fade-in;
-    animation-duration: 750ms;
+    animation-duration: 1000ms;
     animation-timing-function: ease-in-out;
 }
 
 .fade-out {
     animation-name: fade-out;
-    animation-duration: 775ms;
+    animation-duration: 1000ms;
     animation-timing-function: ease-in-out;
 }
 
@@ -62,8 +63,10 @@
     padding: 20px;
     transition: 250ms;
     background-color: var(--lightColor);
-    border: 1px solid var(--darkColor);
+    border: none;
     background-color: var(--accentColor);
+    border-radius: 10px;
+    border: 1px solid var(--accentColor)
 }
 
 .question-container > * {
@@ -71,12 +74,14 @@
     text-align: center;
 }
 
-.question-number {
-    font-size: var(--fs-M);
+.points {
+    font-size: var(--fs-L);
+    color: var(--darkColor);
 }
 
 .question {
-    font-size: var(--fs-L);
+    font-size: var(--fs-M);
+    color: var(--darkColor);
 }
 
 .answer-container {
@@ -93,7 +98,8 @@
     font-size: var(--fs-L);
     display: grid;
     place-content: center;
-    object-fit: contain;
+    object-fit: cover;
+    border: 1px solid var(--accentColor);
 }
 
 .answer {
@@ -101,7 +107,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--darkColor);
+    border: 1px solid var(--accentColor);
     width: 100%;
     font-size: var(--fs-S);
     transition: 250ms;

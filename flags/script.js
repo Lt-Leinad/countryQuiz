@@ -10,7 +10,7 @@ const colorsReset = () => {
     document.querySelector(".correct").classList.add("display-none");
     document.querySelector(".wrong").classList.remove("fade-out");
     document.querySelector(".correct").classList.remove("fade-out");
-  }, 750);
+  }, 1000);
 };
 
 let answer;
@@ -65,11 +65,14 @@ const gameInit = () => {
 const correct = function () {
   document.querySelector(".correct").classList.remove("display-none");
   document.querySelector(".correct").classList.add("fade-in");
+  document.querySelector(".ding").play();
 };
 
 const wrong = function () {
   document.querySelector(".wrong").classList.remove("display-none");
   document.querySelector(".wrong").classList.add("fade-in");
+  document.querySelector(".wrong").textContent = answer.name.common;
+  document.querySelector(".buzzer").play();
 };
 
 const pointsFunc = function (e) {
