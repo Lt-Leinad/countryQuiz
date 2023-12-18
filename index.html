@@ -3,28 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370654501447367"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Country Quiz</title>
   </head>
   <body>
-    <div class="question-container">
-      <h1 class="points"></h1>
-      <h2 class="question">What's the capital city?</h2>
-      <div class="country" alt="Country"></div>
-      <div class="answer-container">
-        <button class="answer answer-a">placeholder</button>
-        <button class="answer answer-b">placeholder</button>
-        <button class="answer answer-c">placeholder</button>
-        <button class="answer answer-d">placeholder</button>
-      </div>
-      <div class="correct display-none">CORRECT</div>
-      <div class="wrong display-none">WRONG</div>
-    </div>
+    <nav class="nav-container">
+      <h1 class="title">Country Quiz</h1>
+      <h2 class="topics">Pick a Deck</h2>
+      <ul class="topics-container">
+        <li class="topic">
+          <a href="capitals/" aria-label="Capital Cities Quiz"
+            >Capital Cities</a
+          >
+        </li>
+        <li class="topic">
+          <a href="/flags/" aria-label="Capital Cities Quiz">Flags</a>
+        </li>
+      </ul>
+    </nav>
     <script src="script.js" async></script>
   </body>
 </html>
