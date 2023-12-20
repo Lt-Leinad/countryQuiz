@@ -82,6 +82,7 @@ const pointsFunc = function (e) {
     correct();
     gameInit();
   } else {
+    points = 0;
     document.querySelector(".points").textContent = points;
     wrong();
     gameInit();
